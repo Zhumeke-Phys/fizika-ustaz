@@ -1,0 +1,2 @@
+import {decodeRich,latexTree,treeMathml} from './rich-format';
+export default function RichText({value,className=''}:{value:string,className?:string}){const lines=decodeRich(value);if(!lines)return <span className={'rich-plain '+className}>{value}</span>;return <span className={'rich-view '+className}>{lines.map((line,i)=>{try{return <span key={i} className="rich-line" dangerouslySetInnerHTML={{__html:treeMathml(latexTree(line))}}/>}catch{return <span key={i}>{line}</span>}})}</span>}
