@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api/
+Sitemap: https://fizika-ustaz.ortaq-top.chatgpt.site/sitemap.xml
